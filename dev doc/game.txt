@@ -1,0 +1,14 @@
+===for developer===
+related files
+
+GarenaLoLTW\GameData\Apps\LoLTW\Game\DATA\CFG\Locale.cfg
+GarenaLoLTW\GameData\Apps\LoLTW\Game\DATA\Menu\fontconfig_en_US.txt
+GarenaLoLTW\GameData\Apps\LoLTW\Game\DATA\CFG\defaults\GamePermanent.cfg
+
+add a new line "Chat.zip" in
+D:\GarenaLoLTW\GameData\Apps\LoLTW\Game\ClientZips.txt
+
+Chat.zip content (GarenaLoLTW\GameData\Apps\LoLTW\Game\DATA\Menu\fontconfig_en_US.txt)
+
+
+You need Qt SDK to develop this program

@@ -1,3 +1,4 @@
 ﻿https://ss64.com/nt/cmd.html
+http://steve-jansen.github.io/guides/windows-batch-scripting/part-2-variables.html
 
 The space before the = is interpreted as part of the name, and the space after it (as well as the quotation marks) are interpreted as part of the value. So the variable you’ve created can be referenced with %location %. If that’s not what you want, remove the extra space(s) in the definition.

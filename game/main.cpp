@@ -44,7 +44,7 @@ bool PatchLocale(QString BasePath) {
     QFile FileEnUS;
     DWORD dwAttrs;
 
-    FileEnUS.setFileName(BasePath + "/" + LocalePath);
+    FileEnUS.setFileName(BasePath + LocalePath);
     FileEnUS.open(QIODevice::WriteOnly);
     FileEnUS.write("[General]\n");
     FileEnUS.write("LanguageLocaleRegion=en_US\n");
@@ -79,7 +79,7 @@ bool PatchFont(QString BasePath) {
 
 
     // patch Fontconfig file
-    FileEnUS.setFileName(BasePath + "/" + FontconfigPath);
+    FileEnUS.setFileName(BasePath + FontconfigPath);
     FileEnUS.open(QIODevice::ReadWrite | QIODevice::Text);
     // make backup
     FileInfo.setFile(FileEnUS);
@@ -92,7 +92,7 @@ bool PatchFont(QString BasePath) {
     TextStreamReaderBackup.setDevice(&FileBackup);
 
     TextStreamWriterEnUS.setDevice(&FileEnUS);
-    FileZhTW.setFileName(BasePath + "/" + FontconfigZhTWPath);
+    FileZhTW.setFileName(BasePath + FontconfigZhTWPath);
     FileZhTW.open(QIODevice::ReadOnly);
     TextStreamReaderZhTW.setDevice(&FileZhTW);
     TextStreamReaderZhTW.setCodec("UTF-8");
@@ -107,7 +107,7 @@ bool PatchFont(QString BasePath) {
     FileEnUS.close();
 
     // overwrite GamePermanent.cfg with GamePermanent_zh_TW.cfg
-    FileEnUS.setFileName(BasePath + "/" + GamePermanentPath);
+    FileEnUS.setFileName(BasePath + GamePermanentPath);
     FileEnUS.open(QIODevice::ReadWrite | QIODevice::Text);
     // make backup
     FileInfo.setFile(FileEnUS);
@@ -116,7 +116,7 @@ bool PatchFont(QString BasePath) {
     backupFile = FileInfo.absolutePath() + "/" + FileInfo.baseName() + " " + ModifiedTime + "." + FileInfo.suffix();
     FileEnUS.copy(backupFile);
     FileEnUS.remove();
-    QFile::copy(BasePath + "/" + GamePermanentZhTWPath, BasePath + "/" + GamePermanentPath);
+    QFile::copy(BasePath + GamePermanentZhTWPath, BasePath + GamePermanentPath);
 
     return true;
 }
@@ -128,7 +128,7 @@ bool PatchChat(QString BasePath) {
     QTextStream TextStreamReader;
     bool patched = false;
 
-    FileClientZips.setFileName(BasePath + "/" + ClientZipsPath);
+    FileClientZips.setFileName(BasePath + ClientZipsPath);
     FileClientZips.open(QIODevice::ReadWrite | QIODevice::Text);
     TextStreamReader.setDevice(&FileClientZips);
     TextStreamReader.setCodec("UTF-8");

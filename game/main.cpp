@@ -4,6 +4,7 @@
 #include <QTextStream>
 #include <QDateTime>
 #include <QProcess>
+#include <QCommandLineParser>
 
 #ifdef WIN32
 #define _UNICODE
@@ -21,20 +22,28 @@ int main(int argc, char *argv[])
     QString BasePath;
 
     QCoreApplication a(argc, argv);
+    QCommandLineParser parser;
+//    parser.setApplicationDescription("Test helper");
+//    parser.addHelpOption();
+    parser.addOptions({
+        {"font", "font patch"},
+        {"chat", "chat path"},
+        {"no-locale", "no locale patch"},
+
+    });
+    parser.process(a);
 
 
-
-    // patch Local file
-    if ( argc >=2)
-        BasePath = argv[1];
+    if (parser.positionalArguments().length())
+        BasePath = parser.positionalArguments()[0];
     else
         BasePath = QCoreApplication::applicationDirPath();
-
-
-    if ( argc >=3 && QString::compare(argv[2], "/no-locale")!=0 )
+    if (!parser.isSet("no-locale"))
         PatchLocale(BasePath);
-    PatchFont(BasePath);
-    PatchChat(BasePath);
+    if (parser.isSet("font"))
+        PatchFont(BasePath);
+    if (parser.isSet("chat"))
+        PatchChat(BasePath);
 
 //    return a.exec();
     return 0;

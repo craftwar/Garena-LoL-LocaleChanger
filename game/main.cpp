@@ -23,8 +23,8 @@ int main(int argc, char *argv[])
 
     QCoreApplication a(argc, argv);
     QCommandLineParser parser;
-//    parser.setApplicationDescription("Test helper");
-//    parser.addHelpOption();
+    parser.setApplicationDescription("Changes GarenaLoL game client from TW to English");
+    parser.addHelpOption();
     parser.addOptions({
         {"font", "font patch"},
         {"chat", "chat path"},

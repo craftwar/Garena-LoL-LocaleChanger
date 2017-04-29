@@ -1,0 +1,11 @@
+New lobby client is built on Chromium Embedded Framework(CEF).
+You can extract wad files but you can't modify them (need to be singed by riot private key).
+You can accomplish this by Modifying data and executive in memory in theory.
+But I don't do that here (not allowed in github and lack of knowledges).
+
+rename/remove
+\GarenaLoLTW\GameData\Apps\LoLTW\LeagueClient\Plugins\rcp-be-lol-game-data\zh_TW-assets.wad
+champions picking in English and more
+
+unknown
+rcp-fe-lol-typekit

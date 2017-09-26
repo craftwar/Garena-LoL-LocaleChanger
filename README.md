@@ -12,7 +12,8 @@
   
 遊戲
 -----------
-  兩種介面遊戲的客戶端都一樣 (目前英文化後中文顯示有問題)
+  兩種介面遊戲的客戶端都一樣
+  需手動抽取設定檔再修改
   
 ===========  
   
@@ -28,3 +29,8 @@ Lobby
 Game
 -----------
   same game client in both lobby client (can't display Chinese properly)
+
+License
+-----------
+[lol-wad-parser](https://github.com/Pupix/lol-wad-parser)
+MIT License

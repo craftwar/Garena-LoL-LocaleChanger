@@ -5,6 +5,16 @@ GarenaLoLTW\GameData\Apps\LoLTW\Game\DATA\CFG\Locale.cfg
 GarenaLoLTW\GameData\Apps\LoLTW\Game\DATA\Menu\fontconfig_en_US.txt
 GarenaLoLTW\GameData\Apps\LoLTW\Game\DATA\CFG\defaults\GamePermanent.cfg
 
+
+get fontconfig from 
+GarenaLoLTW\\GameData\\Apps\\LoLTW\\Game\\DATA\\FINAL\\Localized\\Global.zh_TW.wad.client
+GarenaLoLTW\\GameData\\Apps\\LoLTW\\Game\\DATA\\FINAL\\Localized\\Global.en_US.wad.client
+
+To extract wad file
+https://mapskins.com/wooxy/
+https://github.com/Pupix/lol-wad-parser/ (nodejs module)
+
+
 add a new line "Chat.zip" in
 D:\GarenaLoLTW\GameData\Apps\LoLTW\Game\ClientZips.txt
 
